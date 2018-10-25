@@ -1060,9 +1060,6 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="crp-yK-k7N">
                                 <rect key="frame" x="30" y="416" width="315" height="159"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="L4W-Df-g21"/>
-                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yNw-xZ-2tR">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -1083,26 +1080,27 @@
                         </subviews>
                         <color key="backgroundColor" red="0.97794803630853222" green="1" blue="0.97311237217164248" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="J0K-8i-KWD" firstAttribute="top" secondItem="uGY-3c-17F" secondAttribute="bottom" constant="20" id="2ql-dN-97I"/>
+                            <constraint firstItem="J0K-8i-KWD" firstAttribute="top" secondItem="uGY-3c-17F" secondAttribute="bottom" constant="10" id="2ql-dN-97I"/>
                             <constraint firstItem="296-wf-1ij" firstAttribute="centerX" secondItem="jAY-vK-E56" secondAttribute="centerX" id="5fZ-rB-UCR"/>
                             <constraint firstItem="296-wf-1ij" firstAttribute="width" secondItem="Nba-aV-4Gr" secondAttribute="width" constant="-40" id="9Ka-ty-VrT"/>
                             <constraint firstItem="uGY-3c-17F" firstAttribute="width" secondItem="Nba-aV-4Gr" secondAttribute="width" constant="-40" id="CBl-is-cRV"/>
                             <constraint firstItem="uGY-3c-17F" firstAttribute="leading" secondItem="Nba-aV-4Gr" secondAttribute="leading" constant="20" id="D2L-5z-3Wy"/>
-                            <constraint firstItem="296-wf-1ij" firstAttribute="top" secondItem="EPK-wP-GFJ" secondAttribute="bottom" constant="20" id="DfN-R9-fuG"/>
+                            <constraint firstItem="296-wf-1ij" firstAttribute="top" secondItem="EPK-wP-GFJ" secondAttribute="bottom" constant="10" id="DfN-R9-fuG"/>
                             <constraint firstItem="Sd2-pV-nIo" firstAttribute="width" secondItem="J0K-8i-KWD" secondAttribute="width" id="DhC-tn-HzU"/>
-                            <constraint firstItem="Sd2-pV-nIo" firstAttribute="top" secondItem="J0K-8i-KWD" secondAttribute="bottom" constant="20" id="FuX-QF-Ycp"/>
-                            <constraint firstItem="EPK-wP-GFJ" firstAttribute="top" secondItem="Ucn-Bs-Pcf" secondAttribute="bottom" constant="20" id="I4V-Ki-lzy"/>
+                            <constraint firstItem="Sd2-pV-nIo" firstAttribute="top" secondItem="J0K-8i-KWD" secondAttribute="bottom" constant="10" id="FuX-QF-Ycp"/>
+                            <constraint firstItem="EPK-wP-GFJ" firstAttribute="top" secondItem="Ucn-Bs-Pcf" secondAttribute="bottom" constant="10" id="I4V-Ki-lzy"/>
                             <constraint firstItem="0VN-g0-aV4" firstAttribute="leading" secondItem="Ucn-Bs-Pcf" secondAttribute="leading" id="I5y-me-vPi"/>
                             <constraint firstItem="crp-yK-k7N" firstAttribute="width" secondItem="Nba-aV-4Gr" secondAttribute="width" constant="-40" id="IkW-Z4-7HC"/>
                             <constraint firstItem="J0K-8i-KWD" firstAttribute="leading" secondItem="uGY-3c-17F" secondAttribute="leading" id="J03-H4-Aj8"/>
-                            <constraint firstItem="0VN-g0-aV4" firstAttribute="top" secondItem="296-wf-1ij" secondAttribute="bottom" constant="20" id="Kt3-Zc-YRa"/>
+                            <constraint firstItem="0VN-g0-aV4" firstAttribute="top" secondItem="296-wf-1ij" secondAttribute="bottom" constant="10" id="Kt3-Zc-YRa"/>
                             <constraint firstAttribute="bottom" secondItem="yce-po-6CQ" secondAttribute="bottom" id="OWe-wh-lPm"/>
                             <constraint firstItem="Ucn-Bs-Pcf" firstAttribute="leading" secondItem="Sd2-pV-nIo" secondAttribute="leading" id="PJv-0Z-KY1"/>
+                            <constraint firstItem="crp-yK-k7N" firstAttribute="height" secondItem="Nba-aV-4Gr" secondAttribute="height" constant="-480" id="aT0-9e-CFO"/>
                             <constraint firstItem="Sd2-pV-nIo" firstAttribute="leading" secondItem="J0K-8i-KWD" secondAttribute="leading" id="ayZ-aX-3Ea"/>
                             <constraint firstItem="0VN-g0-aV4" firstAttribute="width" secondItem="Ucn-Bs-Pcf" secondAttribute="width" id="cbu-yv-6BD"/>
-                            <constraint firstItem="Ucn-Bs-Pcf" firstAttribute="top" secondItem="Sd2-pV-nIo" secondAttribute="bottom" constant="20" id="eZf-C7-tSA"/>
+                            <constraint firstItem="Ucn-Bs-Pcf" firstAttribute="top" secondItem="Sd2-pV-nIo" secondAttribute="bottom" constant="10" id="eZf-C7-tSA"/>
                             <constraint firstItem="yce-po-6CQ" firstAttribute="width" secondItem="Nba-aV-4Gr" secondAttribute="width" id="kvt-qq-7fh"/>
-                            <constraint firstItem="crp-yK-k7N" firstAttribute="top" secondItem="0VN-g0-aV4" secondAttribute="bottom" constant="20" id="mdr-pk-62c"/>
+                            <constraint firstItem="crp-yK-k7N" firstAttribute="top" secondItem="0VN-g0-aV4" secondAttribute="bottom" constant="10" id="mdr-pk-62c"/>
                             <constraint firstItem="uGY-3c-17F" firstAttribute="top" secondItem="Nba-aV-4Gr" secondAttribute="top" constant="40" id="t5H-W3-LxS"/>
                             <constraint firstItem="crp-yK-k7N" firstAttribute="leading" secondItem="Nba-aV-4Gr" secondAttribute="leading" constant="20" id="ubU-bD-YER"/>
                             <constraint firstItem="EPK-wP-GFJ" firstAttribute="width" secondItem="Nba-aV-4Gr" secondAttribute="width" id="zKv-1j-KgY"/>

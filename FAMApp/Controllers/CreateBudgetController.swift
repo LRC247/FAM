@@ -117,6 +117,18 @@ class CreateBudgetController: UIViewController, UpdateBudgetTypeDelegate, AddBal
             let controller = (segue.destination as! TemplatesTableViewController)
             let found = controller.allTemplates.firstIndex(where: { $0.name == self.currentTemplate!.name }) ?? -1;
             
+            let expPercent = (self.currentTemplate?.expenses.percentage)! / 100.0;
+            for i in 0...(self.currentTemplate?.expenses.categories.count)! - 1 {
+                let percentage = (self.currentTemplate?.expenses.categories[i].percentage)! / 100.0;
+                self.currentTemplate?.expenses.categories[i].amount = Double(self.startingBalance!) * percentage * expPercent
+            }
+            
+            let savPercent = (self.currentTemplate?.savings.percentage)! / 100.0;
+            for i in 0...(self.currentTemplate?.savings.categories.count)! - 1 {
+                let percentage = (self.currentTemplate?.savings.categories[i].percentage)! / 100.0;
+                self.currentTemplate?.savings.categories[i].amount = Double(self.startingBalance!) * percentage * savPercent
+            }
+            
             if found >= 0 {
                 controller.allTemplates[found] = self.currentTemplate!
             } else {

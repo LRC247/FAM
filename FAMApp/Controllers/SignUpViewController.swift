@@ -73,12 +73,12 @@ class SignUpViewController: UIViewController {
             
         }
         else {
-            Auth.auth().createUser(withEmail: username as String, password: confirmPassword as String) { (user, error) in
+            Auth.auth().createUser(withEmail: username as String, password: confirmPassword as String) { (result, error) in
                 if (error != nil) {
                     self.alertMessage = "Failed to sign up"
                     self.CreateAlert()
                 } else {
-                    let currentUser = UserModel.init(name: user!.email!, uid: user!.uid)
+                    let currentUser = UserModel.init(name: result!.user.email!, uid: result!.user.uid)
                     UserModel.save(currentUser)(db: self.db!, onSuccess: { (_user: UserModel) in
                         self.performSegue(withIdentifier: "signUpUserOverviewSegue", sender: sender)
                     }, onFailure: { (error: Error?) in

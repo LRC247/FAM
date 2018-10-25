@@ -19,6 +19,26 @@ class AddCategoryController : UIViewController, UICollectionViewDataSource, UICo
     var amount: Float!
     var index: Int = 0
     
+    var iconsList = ["fa-amazon", "fa-anchor", "fa-cannabis", "fa-car-side", "fa-gas-pump", "fa-glass-martini-alt", "fa-graduation-cap",
+                     "fa-golf-ball", "fa-hammer", "fa-gulp", "fa-horse", "fa-hotel", "fa-motorcycle", "fa-phone", "fa-plane departure",
+                     "fa-money-bill-alt", "fa-piggy bank", "fa-home", "fa-warehouse", "fa-tv", "fa-helicopter", "fa-book", "fa-band-aid",
+                     "fa-space shuttle", "fa-wine-bottle", "fa-umbrella", "fa-swimming pool", "fa-drafting", "fa-dumbbell", "fa-beer",
+                     "fa-gift", "fa-fighter-jet", "fa-taxi", "fa-bus", "fa-train", "fa-globe-americas", "fa-credit-card",
+                     "fa-shopping-cart", "fa-music", "fa-truck",
+                     "fa-bus",
+                     "fa-bicycle",
+                     "fa-futbol",
+                     "fa-car",
+                     "fa-taxi",
+                     "fa-book",
+                     "fa-star",
+                     "fa-train",
+                     "fa-subway",
+                     "fa-rocket",
+                     "fa-calendar",
+                     "fa-calendar-check",
+                     "fa-amazon"]
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.txtName.resignFirstResponder()
         return true;
@@ -75,48 +95,21 @@ class AddCategoryController : UIViewController, UICollectionViewDataSource, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 16
+        return iconsList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "IconItemCell", for: indexPath) as! IconItemCell
         var iconName: String;
-        switch indexPath.item {
-        case 0:
-            iconName = "fa-credit-card"
-        case 1:
-            iconName = "fa-shopping-cart"
-        case 2:
-            iconName = "fa-music"
-        case 3:
-            iconName = "fa-truck"
-        case 4:
-            iconName = "fa-bus"
-        case 5:
-            iconName = "fa-bicycle"
-        case 6:
-            iconName = "fa-futbol"
-        case 7:
-            iconName = "fa-car"
-        case 8:
-            iconName = "fa-taxi"
-        case 9:
-            iconName = "fa-book"
-        case 10:
-            iconName = "fa-star"
-        case 11:
-            iconName = "fa-train"
-        case 12:
-            iconName = "fa-subway"
-        case 13:
-            iconName = "fa-rocket"
-        case 14:
-            iconName = "fa-calendar"
-        case 15:
-            iconName = "fa-calendar-check"
-        default:
-            iconName = "fa-amazon"
+        
+        iconName = iconsList[indexPath.row]
+        
+        for i in 0...iconsList.count - 1 {
+            if (FontAwesomeIcons[iconsList[i]] == nil) {
+                    print(iconsList[i])
+            }
         }
+        
         cell.iconImage.image = UIImage.fontAwesomeIcon(name: FontAwesome(rawValue: FontAwesomeIcons[iconName]!)!, style: .solid, textColor: .white, size: CGSize(width: 40, height: 40))
         cell.iconName = iconName
         if (cell.iconName == self.selectedIconName) {
